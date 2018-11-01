@@ -4,7 +4,7 @@ import YTSearch from 'youtube-api-search';
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 // Create a new component. This component should produce some HTML
-const youtubeAPI = 'AIzaSyCUCMPVYpQgj9rvHxQdU_iErQWmom1Hh3g';
+const youtubeAPI = '';
 
 class App extends Component{
     constructor(props){
