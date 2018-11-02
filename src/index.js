@@ -10,7 +10,7 @@ import VideoDetail from "./components/video_detail";
 
 //const youtubeAPI = fetch("file:///Users/chenfa/ReduxSimpleStarter/src/key.txt").then(response => response.text()).then(text => console.log(text));
 // npm install --save lodash
-const youtubeAPI = 'AIzaSyD16xDUAnJW2Zids3L3Dixm8Ng9ZIGrpBQ';
+const youtubeAPI = '';
 
 class App extends Component{
     constructor(props) {
