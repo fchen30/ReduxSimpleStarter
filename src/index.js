@@ -9,9 +9,7 @@ import VideoDetail from "./components/video_detail";
 
 //const youtubeAPI = fetch("file:///Users/chenfa/ReduxSimpleStarter/src/key.txt").then(response => response.text()).then(text => console.log(text));
 
-const youtubeAPI ='';
 const youtubeAPI = '';
->>>>>>> 7258e78b1f97218bf94510b39161f936647faff4
 
 class App extends Component{
     constructor(props) {
