@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import _ from 'lodash';
 import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
 import SearchBar from './components/search_bar';
@@ -8,8 +9,8 @@ import VideoDetail from "./components/video_detail";
 
 
 //const youtubeAPI = fetch("file:///Users/chenfa/ReduxSimpleStarter/src/key.txt").then(response => response.text()).then(text => console.log(text));
-
-const youtubeAPI = '';
+// npm install --save lodash
+const youtubeAPI = 'AIzaSyD16xDUAnJW2Zids3L3Dixm8Ng9ZIGrpBQ';
 
 class App extends Component{
     constructor(props) {
@@ -37,10 +38,12 @@ class App extends Component{
 
 // The SearchBar has a property  which calls function that takes a search term  that is passed from search-bar.js and and pass it to the videoSearch()
     render() {
+        //debounce(function, 300) debounce take a function and return a new function. The function will be called once 300 milliseconds to videoSearch.
+        const videoSearch = _.debounce((term) =>{this.videoSearch(term)},300);
         return (
             <div>
 
-                <SearchBar onSearchTermChange = {term => this.videoSearch(term)}/>
+                <SearchBar onSearchTermChange = {videoSearch}/>
                 <VideoDetail video={this.state.selectedVideo}/>
                 <VideoList
                     // you can also do { selectedVideo => this.setState()
